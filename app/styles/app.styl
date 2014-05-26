@@ -1,26 +1,76 @@
 @import 'normalize'
+@import 'button'
 
-body
+html
   font-size: 62.5%
   background-color: #f6f5f5
   font-family: 'Open Sans', sans-serif
   padding: 1.5rem
 
+body
+  font-size: 1.4rem
+
 #tadas
   margin: 0 auto
   width: 500px
-  min-height: 575px
   background-color: white
-  border-radius: 3px
+  border-radius: 5px
   border: 1px solid #e4e4e4
 
 .dragging
   opacity: 0.4
 
 h1
-  font-size: 1.8rem
+  font-size: 3rem
   width: 100%
-  padding-bottom: 2rem
+  padding: 3rem 0 4rem 0
   border-bottom: 1px dashed #e4e4e4
   font-weight: bold
   text-align: center
+
+ul
+  padding: 0
+  list-style-type: none
+  min-height: 300px
+
+  li
+    color: #333
+    padding: 1.5rem 2rem 1.4rem 2rem
+    &:nth-child(odd)
+      background-color: #f4f7fa
+
+#new-task
+  margin: 2rem
+
+  input
+    box-shadow: inset 2px 2px 3px 0 #efefef
+    color: #333
+    padding: 1rem
+    border-radius: 5px
+    margin-right: 0.5rem
+    border: 1px solid #b7b6b6
+    width: 63%
+
+  button
+    tada-button()
+
+#bottom-navigation
+  padding: 2rem
+  border-top: 1px dashed #e4e4e4
+  font-size: 1.3rem
+
+  .remaining-count
+    display: inline-block
+    color: #999
+
+  a#complete-all
+    float: right
+    color: #448ccb
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+
+.task
+  &.is-completed
+    text-decoration: line-through
+    color: #999

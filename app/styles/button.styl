@@ -1,0 +1,28 @@
+tada-button()
+  two-color-background(#dcdbda, #ebeae9)
+  border: 1px solid #999
+  border-radius: 5px
+  box-shadow: inset 0 1px 0 0 #fff
+  color: #454545
+  font-size: 1.3rem
+  font-weight: bold
+  text-shadow: 1px 0 0 #fff
+  height: 100%
+  width: 30%
+  outline: none
+  padding: 1rem
+
+  &:hover
+    two-color-background(#cecbc8, #e3e0db)
+    box-shadow: inset 0 1px 0 0 #ccc
+    color: #333
+
+  &:active
+    two-color-background(#c3bfbb, #cacbd2)
+    box-shadow: inset 0 1px 0 0 #999
+    color: black
+
+two-color-background(top_color, bottom_color)
+  background: linear-gradient(
+    to top, top_color 50%, bottom_color 50%, bottom_color 100%
+  )

@@ -3,3 +3,13 @@
     <li>{{view 'task'}}</li>
   {{/each}}
 </ul>
+
+<div id="bottom-navigation">
+  <div class="remaining-count">
+    {{pluralize-word 'item' remainingCount}} left
+  </div>
+
+  <a {{action 'completeAllTasks'}} id="complete-all" href="#">
+    Mark all as complete
+  </a>
+</div>

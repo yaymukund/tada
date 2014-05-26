@@ -1,1 +1,5 @@
-{{description}} {{position}}
+<div {{bind-attr class=":task isCompleted"}}>
+  <input type="checkbox" {{bind-attr checked=isCompleted}}
+                         {{action 'toggleCompletedTask' this}}>
+  {{description}}
+</div>

@@ -1,4 +1,12 @@
 <div id="tadas">
   <h1>Tadas</h1>
+
+  <div id="new-task">
+    {{input value=draft.description
+            placeholder="What needs to be done?"}}
+
+    <button {{action 'saveDraft'}}>Add Todo</button>
+  </div>
+
   {{outlet}}
 </div>
