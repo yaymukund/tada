@@ -35,7 +35,7 @@ ul
 
   li
     color: #333
-    padding: 1.5rem 2rem 1.4rem 2rem
+    padding: 1rem 2rem 1rem 2rem
     &:nth-child(odd)
       background-color: #f4f7fa
 
@@ -71,6 +71,30 @@ ul
       text-decoration: underline
 
 .task
-  &.is-completed
+  .description
+    margin-left: 0.75rem
+    position: relative
+    bottom: 3px
+  &.is-completed .description
     text-decoration: line-through
     color: #999
+
+.checkbox
+  display: inline-block
+  width: 19px
+  height: 19px
+
+  input[type=checkbox]
+    display: none
+
+    + label
+      background-image: url('/images/checkbox.png')
+      background-repeat: no-repeat
+      background-position: left center
+      display: inline-block
+      width: 19px
+      height: 19px
+      cursor: pointer
+
+    &:checked + label
+      background-position: -19px center

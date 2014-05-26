@@ -1,5 +1,8 @@
 <div {{bind-attr class=":task isCompleted"}}>
-  <input type="checkbox" {{bind-attr checked=isCompleted}}
-                         {{action 'toggleCompletedTask' this}}>
-  {{description}}
+  <div class="checkbox" {{action 'toggleCompletedTask' this}}>
+    <input type="checkbox" {{bind-attr checked=isCompleted}}>
+    <label></label>
+  </div>
+
+  <span class="description">{{description}}</span>
 </div>
