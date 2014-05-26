@@ -26,8 +26,6 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.adapterHost = 'http://tada-api.herokuapp.com';
-    ENV.baseURL = '/tada/';
   }
 
   return ENV;
