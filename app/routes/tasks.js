@@ -31,6 +31,14 @@ export default Ember.Route.extend({
     toggleCompletedTask: function(task) {
       task.toggleProperty('isCompleted');
       task.save();
+    },
+
+    saveDraft: function() {
+      var self = this;
+      self.get('controller.draft').save().then(function() {
+        var draft = self.store.createRecord('task');
+        self.get('controller').set('draft', draft);
+      });
     }
   }
 });
