@@ -1,4 +1,8 @@
-.PHONY: app build deploy
+.PHONY: app build deploy install
+
+install:
+	npm install
+	bower install
 
 app:
 	./node_modules/ember-cli/bin/ember server --proxy http://localhost:8000
