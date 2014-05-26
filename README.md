@@ -7,7 +7,13 @@
 ## Installation
 
 ```bash
-# TODO
+$ git clone https://github.com/yaymukund/tada.git
+$ cd tada
+$ make install
+
+# When you do this, make sure the API server is running on port 8000.
+$ make app
+$ open http://localhost:4200
 ```
 
 ## Commands
