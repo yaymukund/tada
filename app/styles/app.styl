@@ -35,7 +35,6 @@ ul
 
   li
     color: #333
-    padding: 1rem 2rem 1rem 2rem
     &:nth-child(odd)
       background-color: #f4f7fa
 
@@ -71,6 +70,17 @@ ul
       text-decoration: underline
 
 .task
+  cursor: pointer
+
+  &.over
+    border-top: 5px solid #88AFC9
+
+  &:hover
+    background-image: url('/images/drag-handle.png')
+    background-repeat: no-repeat
+    background-position: 95% center
+
+  padding: 1rem 3rem 1rem 2rem
   .description
     margin-left: 0.75rem
     position: relative

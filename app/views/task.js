@@ -1,5 +1,8 @@
 export default Ember.View.extend({
   templateName: 'task',
+  tagName: 'div',
+  classNames: ['task'],
+  classNameBindings: ['controller.isCompleted'],
   attributeBindings: ['isDraggable:draggable'],
   isDraggable: 'true',
 
@@ -18,5 +21,20 @@ export default Ember.View.extend({
     var from = e.dataTransfer.getData('text/plain'),
         to = this.get('controller.id');
     this.get('controller').send('moveTask', from, to);
-  }.on('drop')
+
+    this.$().removeClass('over');
+  }.on('drop'),
+
+  addOverClass: function() {
+    this.$().addClass('over');
+  }.on('dragEnter'),
+
+  removeOverClass: function() {
+    this.$().removeClass('over');
+  }.on('dragLeave'),
+
+  sendToggleEvent: function() {
+    var task = this.get('controller.model');
+    this.get('controller').send('toggleCompletedTask', task);
+  }.on('click')
 });
