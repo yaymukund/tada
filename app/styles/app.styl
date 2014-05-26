@@ -89,6 +89,11 @@ ul
     text-decoration: line-through
     color: #999
 
+  // Magic CSS property saves the day!
+  // http://stackoverflow.com/a/14027995/1207223
+  .checkbox, .description
+    pointer-events: none
+
 .checkbox
   display: inline-block
   width: 19px
