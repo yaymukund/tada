@@ -14,7 +14,8 @@ var routes     = globSync('./routes/*.js', { cwd: __dirname }).map(require);
 
 module.exports = function(emberCLIMiddleware) {
   var app = express();
-  app.use(bodyParser());
+  // https://github.com/stefanpenner/ember-cli/issues/723
+  // app.use(bodyParser());
 
   routes.forEach(function(route) { route(app); });
   app.use(emberCLIMiddleware);
